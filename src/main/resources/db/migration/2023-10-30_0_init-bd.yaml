@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: Initial creation of the Database
+      author: Alexandre MOREAU
+      changes:
+        - tagDatabase: { tag: "0" }
+        - sqlFile:
+            endDelimiter: ;\n
+            splitStatements: true
+            stripComments: true
+            path: db/sql/2023-10-30_0_init-db.sql

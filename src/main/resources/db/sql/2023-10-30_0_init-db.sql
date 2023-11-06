@@ -1,0 +1,13 @@
+CREATE SEQUENCE IF NOT EXISTS  seq_event_id
+    AS INT
+    INCREMENT  BY 1
+    START  WITH 1;
+
+CREATE TABLE event (
+    id BIGINT NOT NULL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    id_user UUID
+);
+
+INSERT INTO event VALUES (1, 'Ginga Nago Tours','31ed937c-7c82-11ee-b962-0242ac120002');
+INSERT INTO event VALUES (2, 'Ginga Nago Nantes','31ed937c-7c82-11ee-b962-0242ac120002');
