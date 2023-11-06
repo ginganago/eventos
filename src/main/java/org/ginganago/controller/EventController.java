@@ -6,6 +6,7 @@ import jakarta.ws.rs.core.MediaType;
 import lombok.RequiredArgsConstructor;
 import org.ginganago.domain.EventDto;
 import org.ginganago.service.EventService;
+import org.jboss.resteasy.reactive.ResponseStatus;
 
 @ApplicationScoped
 @RequiredArgsConstructor
@@ -15,6 +16,7 @@ public class EventController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @ResponseStatus(200)
     @Path(("{id}"))
     public EventDto getById(@PathParam("id") Long id) {
         return eventService.getById(id);
